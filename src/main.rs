@@ -1,4 +1,5 @@
 use std::io;
+use std::process;
 fn main() {
     // println!("Hello, world!");
     let mut first = String::new();
@@ -12,6 +13,7 @@ fn main() {
         },
         Err(_err) => {
             println!("this is not valid type number");
+            process::exit(1);
         }
     }
     println!("Please enter a second name");
@@ -23,6 +25,7 @@ fn main() {
         },
         Err(_err) => {
             println!("this is not second valid type number");
+            process::exit(1);
         }
     }
     let result = sum(a,b);
